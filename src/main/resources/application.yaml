@@ -1,13 +1,24 @@
 
 
+oracledb:
+  datasource:
+    platform: oracle
+    url: "jdbc:oracle:thin:@localhost:1521:kishorevSid"
+    username: SYS
+    password: kishorevPassword1
+
 spring:
+  application:
+    name: forex-app-spring-boot-oracle
   jpa:
     hibernate:
       ddl-auto: 'create-drop'
+    database-platform: org.hibernate.dialect.Oracle10gDialect
   datasource:
-    url: "jdbc:oracle:thin:@localhost:1521:xe"
-    username: system
-    password: password
+    platform: oracle
+    url: "jdbc:oracle:thin:@localhost:1521:kishorevSid"
+    username: SYS
+    password: kishorevPassword1
     driver-class-name: oracle.jdbc.driver.OracleDriver
     hikari:
       connection-timeout: 60000

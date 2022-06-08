@@ -12,7 +12,7 @@ cd docker-images/OracleDatabase/SingleInstance/dockerfiles
 
 ./buildContainerImage.sh -v 19.3.0 -e
 
-docker run -d --name oracle -p 1521:1521 -p 5500:5500 oracle/database:19.3.0-ee
+docker run -d --name oracle -p 1521:1521 -p 5500:5500 -e ORACLE_SID=kishorevSid -e ORACLE_PWD=kishorevPassword1 oracle/database:19.3.0-ee
 
 ```
 
